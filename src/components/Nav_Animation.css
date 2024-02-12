@@ -1,0 +1,90 @@
+.A {
+  animation: A 1s both;
+}
+@keyframes A {
+  0% {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+}
+.B {
+  animation: B 1s both;
+  animation-delay: 0.1s;
+}
+@keyframes B {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+.C {
+  animation: C 1s both;
+  animation-delay: 0.3s;
+}
+@keyframes C {
+  0% {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+}
+.D {
+  animation: D 1s both;
+  animation-delay: 0.4s;
+}
+@keyframes D {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+.E {
+  animation: E 1s both;
+  animation-delay: 0.6s;
+}
+@keyframes E {
+  0% {
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+}
+
+.F {
+  animation: F 1s both;
+  animation-delay: 0.7s;
+}
+@keyframes F {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+.G {
+  animation: G 1s both;
+  animation-delay: 0.8s;
+}
+@keyframes G {
+  0% {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+}
+.H {
+  animation: H 1s both;
+  animation-delay: 0.9s;
+}
+@keyframes H {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}
+.I {
+  animation: I 1s both;
+  animation-delay: 1s;
+}
+@keyframes I {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}
