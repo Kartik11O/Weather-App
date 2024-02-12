@@ -56,7 +56,7 @@
 }
 .ShowNames {
   font-size: 1.1rem;
-  color: #bbbbbbed;
+  color: #dad9d9ed;
 }
 #UL-3 {
   position: relative;
@@ -71,7 +71,7 @@
 .W_D {
   display: inline;
   font-size: 1.1rem;
-  color: #bbbbbbed;
+  color: #dad9d9ed;
 }
 .W_D_Number {
   float: right;
@@ -86,7 +86,7 @@
   width: 106px;
   height: 75px;
   float: right;
-  background: #7e9a96;
+  background: #c2c2c224;
   border: none;
 }
 

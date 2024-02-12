@@ -38,12 +38,27 @@ function start() {
     let CityHumidity = V2.current.humidity
     let CityWind = V2.current.wind_kph
     let CityRain = V2.current.pressure_in
+    let IMG = document.getElementById("IMG_Cover") as HTMLImageElement
+    if (IMG == null || CityWeatherType == null) {
+      IMG.src = "https://media.istockphoto.com/id/1472560341/photo/majestic-dark-cloud-and-sky.jpg?s=2048x2048&w=is&k=20&c=EOFRtOBxkp7bbiphbFkd7LUdu6XQv7551Tz3rGkXPeM=";
+    }
     switch (CityWeatherType) {
       case "Clear":
+        IMG.src = "/src/assets/all sky/Clear Sky.jpg";
+        break;
 
+      case "Partly cloudy":
+        IMG.src = "/src/assets/all sky/most clouds.jpg";
+        break;
+      case "Sunny":
+        IMG.src = "/src/assets/all sky/sunny2.jpg";
+        break;
+      case "Light rain":
+        IMG.src = "/src/assets/all sky/rain.jpg";
         break;
 
       default:
+
         break;
     }
 
