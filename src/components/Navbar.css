@@ -58,6 +58,12 @@
   font-size: 1.1rem;
   color: #dad9d9ed;
 }
+.ShowName_Animations {
+  transition: 0.3s;
+}
+.ShowName_Animations:hover {
+  transform: translateY(-5px);
+}
 #UL-3 {
   position: relative;
   list-style: none;
@@ -96,6 +102,6 @@
 @keyframes tt {
   0% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: translateX(20px);
   }
 }
