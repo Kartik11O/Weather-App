@@ -2,8 +2,8 @@ const apikey = `6b616df9910d4bd39c834734240902`;
 let SearchVal = " ";
 let StartingVal = "delhi";
 
-function start(Value_Onclick: string) {
-  let inputvalue = document.getElementById("Search") as HTMLInputElement;
+function start(Value_Onclick) {
+  let inputvalue = document.getElementById("Search") //as HTMLInputElement;
   if (inputvalue) {
     let value = inputvalue.value;
     SearchVal = value;
@@ -13,8 +13,7 @@ function start(Value_Onclick: string) {
 
   console.log("das", SearchVal);
   const Weather = fetch(
-    `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${
-      click || SearchVal || StartingVal
+    `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${click || SearchVal || StartingVal
     }&aqi=yes`,
     {
       headers: {
@@ -40,7 +39,7 @@ function start(Value_Onclick: string) {
     let CityHumidity = V2.current.humidity;
     let CityWind = V2.current.wind_kph;
     let CityRain = V2.current.pressure_in;
-    let IMG = document.getElementById("IMG_Cover") as HTMLImageElement;
+    let IMG = document.getElementById("IMG_Cover") //as HTMLImageElement;
     if (IMG == null || CityWeatherType == null) {
       IMG.src =
         "https://media.istockphoto.com/id/1472560341/photo/majestic-dark-cloud-and-sky.jpg?s=2048x2048&w=is&k=20&c=EOFRtOBxkp7bbiphbFkd7LUdu6XQv7551Tz3rGkXPeM=";
@@ -67,6 +66,9 @@ function start(Value_Onclick: string) {
         break;
       case "Patchy light snow":
         IMG.src = "src/assets/all sky/Patchy light snow.jpg";
+        break;
+      case "Light snow":
+        IMG.src = "src/assets/all sky/light snow.jpg";
         break;
       default:
         break;
