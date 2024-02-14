@@ -1,6 +1,6 @@
 const apikey = `6b616df9910d4bd39c834734240902`;
 let SearchVal = " ";
-let StartingVal = "delhi";
+let StartingVal = "New York";
 
 function start(Value_Onclick: string) {
   let inputvalue = document.getElementById("Search") as HTMLInputElement;
@@ -77,7 +77,7 @@ function start(Value_Onclick: string) {
 
     let Contant = `
    <div id="Contant">
-              <div id="Contant-temp">
+             
                 <h1 id="temp" class = "test">${Citytemp}°</h1>
                 <ul id="UL-1">
                   <li><h1 id="city" class = "test">${Cityname}</h1></li>
@@ -94,7 +94,7 @@ function start(Value_Onclick: string) {
                   </li>
                   <li class="test"><span id="span_D" >${CityWeatherType}</span></li>
                 </ul>
-              </div>
+            
             </div>
   
   `;
