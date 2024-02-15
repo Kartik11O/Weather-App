@@ -1,0 +1,23 @@
+#UL-5 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding-left: 25px;
+  gap: 24px;
+}
+.Weekly_Temp-logo {
+  float: right;
+  padding: 1px 24px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.IMG_Weekly {
+  position: relative;
+  bottom: 9px;
+  width: 41px;
+  line-height: 5px;
+}
+#adding_Height {
+  height: 74vh !important;
+}

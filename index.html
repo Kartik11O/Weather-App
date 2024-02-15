@@ -16,51 +16,67 @@
 <link rel="stylesheet" href="src/components/Sec-1.css" />
 <link rel="stylesheet" href="src/components/Navbar.css" />
 <link rel="stylesheet" href="/src/components/Nav_Animation.css">
+<link rel="stylesheet" href="/src/components/Scroll.css">
+<link rel="stylesheet" href="/src/components/Weekly-Details.css">
 <link rel="stylesheet" media="(max-width:480px)" href="/src/components/Responsive/Phone.css">
 
 
 <body>
   <main>
+    <button id="Search-btn" onclick="Nav_BTN()">
+      <img src="src/assets/icons8-search-30.png" alt="" />
+    </button>
+    <section id="Scroll">
+      <nav id="Navbar">
+        <div class="box">
+
+          <ul id="UL-2">
+            <li>
+              <input id="Search" type="text" placeholder="Another Location" />
+
+            </li>
+            <li class="ShowName_Animations">
+              <h3 class="ShowNames A" onclick="start('Mumbai')">Mumbai</h3>
+            </li>
+            <li class="ShowName_Animations">
+              <h3 class="ShowNames B" onclick="start('Bhopal')">Bhopal</h3>
+            </li>
+            <li class="ShowName_Animations">
+              <h3 class="ShowNames C" onclick="start('Hyderabad')">Hyderabad</h3>
+            </li>
+            <li class="ShowName_Animations">
+              <h3 class="ShowNames D" onclick="start('Bengaluru')">Bengaluru</h3>
+            </li>
+
+          </ul>
+        </div>
+        <div class="box">
+          <h2 id="Headline-2" class="E">Weather Details</h2>
+          <ul id="UL-3"></ul>
+        </div>
+        <div class="box" id="adding_Height">
+          <h2 id="Headline-2" class="E">Weekly Weather Details</h2>
+          <ul id="UL-5">
+
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+
     <section id="Sec-1">
       <div id="Container">
         <img id="IMG_Cover" src="src/assets/all sky/light snow.jpg" alt="" />
-        <nav id="Navbar">
-          <button id="Search-btn" onclick="Nav_BTN()">
-            <img src="src/assets/icons8-search-30.png" alt="" />
-          </button>
-          <div class="box">
 
-            <ul id="UL-2">
-              <li>
-                <input id="Search" type="text" placeholder="Another Location" />
-
-              </li>
-              <li class="ShowName_Animations">
-                <h3 class="ShowNames A" onclick="start('Mumbai')">Mumbai</h3>
-              </li>
-              <li class="ShowName_Animations">
-                <h3 class="ShowNames B" onclick="start('Bhopal')">Bhopal</h3>
-              </li>
-              <li class="ShowName_Animations">
-                <h3 class="ShowNames C" onclick="start('Hyderabad')">Hyderabad</h3>
-              </li>
-              <li class="ShowName_Animations">
-                <h3 class="ShowNames D" onclick="start('Bengaluru')">Bengaluru</h3>
-              </li>
-
-            </ul>
-          </div>
-          <div class="box">
-            <h2 id="Headline-2" class="E">Weather Details</h2>
-            <ul id="UL-3"></ul>
-          </div>
-        </nav>
         <div id="Logo">
           <h1 id="Headline">The Weather</h1>
         </div>
+
         <div id="Container__Weather__Details"></div>
+
       </div>
     </section>
+
   </main>
   <script src="src/main.ts"></script>
   <script src="src/Nav_BTN.js"></script>

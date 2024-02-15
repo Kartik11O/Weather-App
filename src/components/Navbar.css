@@ -1,9 +1,24 @@
-#Navbar {
+#Scroll {
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  z-index: 1;
   height: 100vh;
+  transition: 0.5s;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: clamp(300px, 32vw, 546px);
+}
+.Visiable {
+  width: 0px !important;
+}
+.box_Visiable {
+  display: none !important;
+}
+
+#Navbar {
+  width: 100%;
+  height: 175vh;
   z-index: 1;
   background: radial-gradient(#fff2 30%, #fff4);
   background: #00000040;
@@ -15,12 +30,6 @@
   flex-direction: column;
   transition: 0.5s;
 }
-.Visiable {
-  width: clamp(300px, 32vw, 546px) !important;
-}
-.box_Visiable {
-  display: block !important;
-}
 #Navbar::before {
   content: "";
   position: absolute;
@@ -29,7 +38,7 @@
   z-index: -1;
 }
 .box {
-  display: none;
+  display: block;
   width: clamp(300px, 94%, 513px);
   height: clamp(384px, 49vh, 384px);
   border-bottom: 2px solid #c2c2c278;
@@ -44,7 +53,6 @@
   margin-top: 2rem;
   padding-left: 20px;
   gap: 15px;
-  cursor: pointer;
 }
 #Search {
   border: none;
@@ -64,6 +72,7 @@
 .ShowNames {
   font-size: 1.1rem;
   color: #dad9d9ed;
+  cursor: pointer;
 }
 .ShowName_Animations {
   transition: 0.3s;
@@ -79,12 +88,12 @@
   margin-top: 2rem;
   padding-left: 12px;
   gap: 42px;
-  cursor: pointer;
 }
 .W_D {
   display: inline;
   font-size: 1.1rem;
   color: #dad9d9ed;
+  cursor: pointer;
 }
 .W_D_Number {
   float: right;
@@ -102,6 +111,7 @@
   background: #c2c2c224;
   border: none;
   transition: 0.3s;
+  z-index: 2;
   cursor: pointer;
 }
 #Search-btn:hover {

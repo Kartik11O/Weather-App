@@ -13,16 +13,32 @@ function start(Value_Onclick: string) {
 
   console.log("das", SearchVal);
   const Weather = fetch(
-    `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${
+    `https://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${
       click || SearchVal || StartingVal
-    }&aqi=yes`,
+    }&days=7&aqi=yes`,
     {
       headers: {
+        "Transfer-Encoding": "chunked",
         Connection: "keep-alive",
         Vary: "Accept-Encoding",
-        "Content-Length": "2334",
-        "Content-Type": "text/html",
-        Date: "Sun, 11 Feb 2024 07:56:03 GMT",
+        "CDN-PullZone": "93447",
+        "CDN-Uid": "8fa3a04a-75d9-4707-8056-b7b33c8ac7fe",
+        "CDN-RequestCountryCode": "GB",
+        Age: "0",
+        "x-weatherapi-qpm-left": "4999674",
+        "CDN-ProxyVer": "1.04",
+        "CDN-RequestPullSuccess": "True",
+        "CDN-RequestPullCode": "200",
+        "CDN-CachedAt": "02/14/2024 12:11:53",
+        "CDN-EdgeStorageId": "860",
+        "CDN-Status": "200",
+        "CDN-RequestId": "54d0430fb743f995a8e0a024f42db881",
+        "CDN-Cache": "MISS",
+        "Cache-Control": "public, max-age=180",
+        "Content-Type": "application/json",
+        Date: "Wed, 14 Feb 2024 12:11:53 GMT",
+        Server: "BunnyCDN-DE1-863",
+        Via: "1.1 haproxy-api-1 (Varnish/7.3)",
       },
     }
   );
@@ -45,6 +61,34 @@ function start(Value_Onclick: string) {
       IMG.src =
         "https://media.istockphoto.com/id/1472560341/photo/majestic-dark-cloud-and-sky.jpg?s=2048x2048&w=is&k=20&c=EOFRtOBxkp7bbiphbFkd7LUdu6XQv7551Tz3rGkXPeM=";
     }
+
+    // Forecast (7-days)
+    let Week = V2.forecast.forecastday;
+    let add = "";
+    Week.map((items: any) => {
+      let Week_Date = items.date;
+      var Week_day = Week_Date.substring(8, 10); // Extract characters at index 8 and 9
+      let Week_Icon = items.day.condition.icon;
+      let Week_temp = items.day.avgtemp_c;
+      console.log(items);
+
+      let Week = `
+         <li class="F">
+              <h3 class="W_D">${Week_day}</h3>
+               <span class="Weekly_Temp-logo "><img class="IMG_Weekly"
+                  src="${Week_Icon}"alt=""></span>
+              <span class="Weekly_Temp-logo ">${Week_temp}°
+</span>
+            </li>
+      `;
+      add += Week;
+    });
+    let UL5 = document.getElementById("UL-5");
+    if (UL5 != null) {
+      UL5.innerHTML = add;
+    }
+
+    // This adding Wallpapers to backround
     switch (CityWeatherType) {
       case "Clear":
         IMG.src = "/src/assets/all sky/Clear Sky.jpg";
@@ -132,6 +176,7 @@ function start(Value_Onclick: string) {
       UL_3.innerHTML = WeatherDetails;
     }
   });
+  // UL5_em?.remove();
 }
 
 let inputvalue_Enter = document.getElementById("Search");
@@ -139,6 +184,7 @@ let inputvalue_Enter = document.getElementById("Search");
 inputvalue_Enter?.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     start("");
+    let UL5_em = document.getElementById("UL-5");
   }
 });
 start("");
